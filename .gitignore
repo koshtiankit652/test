@@ -1,0 +1,30 @@
+.DS_Store
+node_modules
+/dist
+
+
+# local env files
+.env.development
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# keep production file
+!.env.production
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Yalc files and folder
+*.yalc
+.yalc/
+.yalc.*
+yalc.*

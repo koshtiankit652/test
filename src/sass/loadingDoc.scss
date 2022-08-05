@@ -1,0 +1,89 @@
+.loadingDoc{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 1vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+
+}
+.docTitle{
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+    //border: 2px solid red;
+    word-break: break-all;
+
+}
+.docTitle:hover{
+    background-color: lightskyblue;
+}
+.vcomplete{
+
+    width: fit-content;
+    border: 2px solid red;
+   text-align: center;
+   justify-content: space-around;
+   background-color: blue;
+  //padding-top: 2vh;
+}
+.doctypeSetCont{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    //flex-direction: column;
+}
+.doctypeCont{
+    //position: relative;
+    width: 100%;
+    //border: 2px solid red;
+    z-index: 2;
+    position: absolute;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    //border: 1px solid black;
+    border-top: 1vh solid blue;
+    margin-top: 4vh;
+}
+.docTypes{
+    //border: 2px solid red;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    width: 100%;
+   cursor: pointer
+
+}
+.docTypes:hover{
+    background-color: lightgray;
+}
+.filterDocTypeInput{
+    width: 95%;
+    padding: 5px 0px 5px 0px ;
+    box-shadow: 0px -3px 2px 0px rgba(0,0,0,0.75) inset;
+}
+.doctypeSetSaveBtn{
+    font-size: 1em;
+    padding: 0.5vh;
+    color: white;
+    font-weight: normal;
+    //background-color: blue;
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    background-color: #4492fd;
+    border-color: #4492fd !important;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.doctypeSetSaveBtn:hover{
+    background-color: lightseagreen;
+}

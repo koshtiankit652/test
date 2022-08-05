@@ -1,0 +1,32 @@
+.docReadyItem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.docReadyItemFirstChild{
+    width: 80%;
+    background: #F5F9FF;
+    border: 0.5px solid #4492FD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 4px 0px 4px 10px;
+    color: #4492FD;
+    word-wrap: break-word;
+    word-break: break-all;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    /* identical to box height */
+
+    text-decoration-line: underline;
+
+    color: #4492FD;
+    cursor: pointer;
+}
+.docReadyItemFirstChild:hover{
+    color: blue;
+}

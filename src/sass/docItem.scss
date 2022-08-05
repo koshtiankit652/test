@@ -1,0 +1,125 @@
+.docItem{
+    width: 100%;
+    height: fit-content;
+    //margin-left: auto;
+    //margin-right: auto;
+    //margin-top: 2vh;
+    //margin-bottom: 2vh;
+    border-radius: 5px;
+    border: 1px solid #4492FD;
+    padding: 1vh;
+    //padding-left: 5vh;
+    //padding-right: 5vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.docTitleContainer{
+    width: 100%;
+    display: flex;
+}
+.docTitle{
+    width: 90%;
+    word-break: break-all;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom:  2px solid #E5E5E5;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #161A33;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+
+}
+.docItemSource{
+    width: 80%;
+    border: 0.5px solid #4492FD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #4492FD;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #4492FD;
+    position: relative;
+    z-index: 2;
+    overflow-x: hidden;
+}
+.docItemSource > b {
+    padding: 4px 0px 4px 10px;
+    display: block;
+}
+.docItemSource > b > span {
+    color: black;
+    margin-left: 0.2vw;
+}
+.docItemSourcePercent {
+    background-color: #F5F9FF;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.docItemLoader{
+    text-align: center;
+}
+.doctypeSetCont{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.doctypeCont{
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top: 1vh solid blue;
+    margin-top: 4vh;
+}
+
+.docTypes{
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    width: 100%;
+    cursor: pointer
+
+}
+.docTypes:hover{
+    background-color: lightgray;
+}
+.filterDocTypeInput{
+    width: 95%;
+    padding: 5px 0px 5px 0px ;
+    box-shadow: 0px -3px 2px 0px rgba(0,0,0,0.75) inset;
+}
+.doctypeSetSaveBtn{
+    font-size: 1em;
+    padding: 0.5vh;
+    color: white;
+    font-weight: normal;
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    background-color: #4492fd;
+    border-color: #4492fd !important;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.doctypeSetSaveBtn:hover{
+    background-color: lightseagreen;
+}

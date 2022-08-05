@@ -1,0 +1,87 @@
+.loadingDocContParent{
+    width: 100%;
+    //border: 2px solid orange;
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+.docItemsCont{
+    width: 70%;
+    //height: 100vh;
+    height: 100vh;
+    //border: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   //align-items: center;
+    //flex-direction: row;
+    flex-wrap: wrap;
+}
+.loadingDocCont{
+
+    width: 200px;
+   margin: 2vh 2vw;
+
+
+}
+#loadingDocsParent{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+
+}
+#loadingDocsNavCont{
+    width: 80vw;
+    display: flex;
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    flex-direction: row;
+    justify-content: center;
+    background-color: lightgrey;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    box-shadow: 0px 5px 10px -3px rgba(0,0,0,0.26);
+
+}
+.currentTypeVselect{
+    width: 200px;
+    background-color: white;
+}
+.currentTypeVselect > .vs__dropdown-toggle{
+    border-radius: 0px;
+}
+.currentTypeVselect > .vs__dropdown-toggle > .vs__selected-options{
+    flex-wrap: nowrap;
+    border-color: darkblue;
+}
+#loadingDocsNavSeparator{
+    width: 100%;
+    height: 2vh;
+}
+.loadingDocItem{
+    width: 100%;
+}
+.docItemsContEmpty{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.docItemsContEmpty > img:first-child{
+    flex-shrink: 0!important;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 70px;
+}
+.docItemsContEmpty > img:nth-child(2){
+    flex-shrink: 0!important;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 70px;
+}
