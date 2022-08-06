@@ -34,8 +34,8 @@ jobs:
         DOCKER_REPO: zenith-frontend
 
       run:
-      - docker build -t $DOCKER_REPO .
-      - bash /script/docker_push.sh
+       docker build -t $DOCKER_REPO .
+       bash /script/docker_push.sh
       
       
       #run: |
