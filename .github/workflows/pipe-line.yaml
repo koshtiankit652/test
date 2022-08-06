@@ -31,9 +31,22 @@ jobs:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ${{ secrets.REPO_NAME }}
         IMAGE_TAG: latest
-      run: |
-        # Build a docker container and push it to ECR 
-        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-        echo "Pushing image to ECR..."
-        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+        DOCKER_REPO: zenith-frontend
+
+      script:
+      - aws configure set aws_access_key_id foo
+      - aws configure set aws_secret_access_key bar
+      - cat ~/.aws/credentials
+      - docker build -t $DOCKER_REPO .
+
+      deploy:
+        provider: script
+        script: bash /script/docker_push.sh    
+
+
+      #run: |
+      #  # Build a docker container and push it to ECR 
+      #  docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+      #  echo "Pushing image to ECR..."
+      #  docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+      #  echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
