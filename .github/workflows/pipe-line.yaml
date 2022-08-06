@@ -39,7 +39,7 @@ jobs:
       - cat ~/.aws/credentials
       - docker build -t $DOCKER_REPO .
 
-      deploy:
+      run:
         provider: script
         script: bash /script/docker_push.sh    
 
