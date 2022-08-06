@@ -38,12 +38,9 @@ jobs:
       - aws configure set aws_secret_access_key bar
       - cat ~/.aws/credentials
       - docker build -t $DOCKER_REPO .
-
-      run:
-        provider: script
-        script: bash /script/docker_push.sh    
-
-
+      - bash /script/docker_push.sh
+      
+      
       #run: |
       #  # Build a docker container and push it to ECR 
       #  docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
