@@ -20,7 +20,8 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ env.AWS_REGION }}
+        aws-region: ap-south-1
+    
     - name: Login to Amazon ECR
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
@@ -30,18 +31,16 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ${{ secrets.REPO_NAME }}
-        IMAGE_TAG: ${{ secrets.IMAGE_TAG }}
-        DOCKER_REPO: ${{ secrets.DOCKER_REPO }}
-        REGION: ${{ secrets.REGION }}
+        IMAGE_TAG: latest
 
-      run:
-       docker build -t $DOCKER_REPO .
-       bash /script/docker_push.sh
+ #     run:
+ #      docker build -t $DOCKER_REPO .
+ #      bash /script/docker_push.sh
       
       
-      #run: |
+      run: |
       #  # Build a docker container and push it to ECR 
-      #  docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-      #  echo "Pushing image to ECR..."
-      #  docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-      #  echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
+        echo "Pushing image to ECR..."
+        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
