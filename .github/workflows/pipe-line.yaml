@@ -34,7 +34,6 @@ jobs:
         DOCKER_REPO: zenith-frontend
 
       run:
-      - cat ~/.aws/credentials
       - docker build -t $DOCKER_REPO .
       - bash /script/docker_push.sh
       
