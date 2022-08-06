@@ -34,8 +34,6 @@ jobs:
         DOCKER_REPO: zenith-frontend
 
       run:
-      - aws configure set aws_access_key_id foo
-      - aws configure set aws_secret_access_key bar
       - cat ~/.aws/credentials
       - docker build -t $DOCKER_REPO .
       - bash /script/docker_push.sh
