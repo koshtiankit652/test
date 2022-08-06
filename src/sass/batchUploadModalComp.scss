@@ -1,0 +1,114 @@
+#batchUploadModal{
+    position: fixed;
+    z-index: 100;;
+    width: 90%;
+    height: 90%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid blue;
+}
+.hdrFirstChild{
+    width: 100%;
+    height: 100%;
+}
+.batchUploadModalItemCont{
+    width: 100%;
+    max-height: 70%;
+    //height: fit-content;
+    padding-top: 5vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: relative;
+
+    //border: 1px solid blue;
+}
+.batchUploadModalItems{
+    width: 100%;
+    height: fit-content;
+    //border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.batchUploadModalItem{
+    width: fit-content;
+    display: flex;
+    border: 3px solid red;
+    background-color: blue;
+    border-color: blue;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+}
+.batchUploadModalItem > input {
+    width: 90vh;
+    padding: 0.2vh 0vw 0.2vh 0vh;
+}
+.batchUploadModalItemDeleteBtn{
+    padding: 0px 10px 0px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: red;
+}
+.batchUploadModalItemDeleteBtn:hover{
+    color: orange;
+    font-size: 1.2em;
+}
+.batchUploadModalItemAddBtn{
+    font-size:20px;
+    //width: ;
+    border: 2px solid blue;
+    padding: 0.5vh 2vw 0.5vw 2vw;
+    background-color: darkgray;
+    cursor: pointer;
+    margin: 1vh;
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+}
+.batchUploadModalItemAddBtn:hover{
+    //background-color: blue;
+    border-width: 3px;
+
+}
+.batchUploadModalBottomBtnCont{
+    width: 100%;
+    background-color: lightgray;
+    bottom: 0px;
+    height: 20vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.batchUploadModalBottomBtnSection{
+    width: fit-content;
+    height: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+}
+.batchUploadModalBottomBtn{
+    font-size:20px;
+    //width: ;
+    border: 2px solid blue;
+    padding: 0.5vh 0.5vh 0.5vw 0.5vh;
+    background-color: darkgray;
+    cursor: pointer;
+    margin: 1vh;
+
+}
+.batchUploadModalBottomBtn:hover{
+    //background-color: blue;
+    border-width: 3px;
+
+}

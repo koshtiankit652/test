@@ -1,0 +1,158 @@
+#pdfSmartPanel{
+    //border: 5px solid black;
+    border-left: 2px solid  lightblue;
+    min-height:100%;
+    width: 30%;
+    display: flex;
+    background-color: white;
+    margin-right: auto;
+    justify-content: center;
+    -webkit-animation: slide 0.5s forwards;
+    //-webkit-animation-delay: 2s;
+    animation: slide 0.5s forwards;
+    overflow: hidden;
+
+}
+@-webkit-keyframes slide {
+    100% { left: 0;}
+
+}
+
+@keyframes slide {
+    100% { left: 0;}
+}
+.smartPanelClose{
+    width: 100%;
+    text-align: right;
+    //border: 2px solid red;
+    display: flex;
+    justify-content: right;
+    border-bottom: 2px solid lightblue;
+    margin-left: auto;
+    margin-right: auto;
+}
+.smartPanelCloseBtn{
+    margin-right: 20px;
+    padding:0.5vh;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.pdfSmartPanelFirstChild{
+    width: 100%;
+    height: 100%;
+    //overflow-y: hidden;
+    box-sizing: border-box;
+    position: relative;
+    margin:0;
+}
+.smartPanelHder{
+    width: 90%;
+    text-align: center;
+    //border: 2px solid red;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid lightblue;
+    margin-left: auto;
+    margin-right: auto;
+}
+.smartPanelBtnCont{
+    width: 90%;
+    padding: 0.5vh 0vh 0.5vh 0vh;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+}
+.smartPanellBtn{
+    background-color: white;
+    border: 0.5px solid #4492FD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    //border-radius: 10%;
+    //background-color: white;
+    font-weight: solid;
+    font-size: 3vh;
+    color:  #4492FD;
+    padding: 1vh;
+    height: fit-content;
+    width: fit-content;
+    font-size: 2vh;
+    font-weight: bold;
+    cursor: pointer;
+}
+.smartPanellBtn:hover{
+    background-color: #4492FD;
+    color: white;
+}
+.smartPanelNav{
+    width: 90%;
+    padding: 0.5vh 0vh 0.5vh 0vh;
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+.smartPanelNav > .smartPanelNavBtn{
+    font-family: Futura;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 21px;
+    color: #161A33;
+}
+.smartPanelNav > .smartPanelNavBtn:hover{
+    color:  #4492FD;
+}
+.loadingDocContainer{
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 95%;
+    height: 60%;
+    //padding-top: 20vh;
+    //padding-bottom: 5vh;
+    position: relative;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    //flex-direction: row;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
+    //border: 2px solid red;
+    //margin-top: -10px;
+    //margin-bottom: -10px;
+    //box-shadow: 2px solid blue;
+    //box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75) inset, 0px -2px 5px 0px rgba(0,0,0,0.75) inset;
+    //border: 2px solid lightblue;
+    //border-radius: 5px;
+
+}
+.loadingDocContainer:hover{
+    background-color: #F0F0F0;
+     /*lightgray;*/
+}
+.loadingDocContainer > .loadingDocCont{
+    //border: 1px solid yellow;
+    //margin-bottom: 1vh;
+    //height: fit-content;
+   //background-color: white;
+        width: 80%;
+    cursor: pointer;
+}
+.loadingDocContainer > .loadingDocCont > .loadingDoc {
+    background-color: white;
+    //border: 1px solid yellow;
+}
+.loadingDocContainer > .loadingDocCont > .loadingDoc:hover {
+    //background-color: #E6E6FA;
+    border: 2px solid blue;
+}
+/*
+.loadingDocsNavSeparator{
+    width: 100%;
+    height: 30px;
+    border: 2px solid red;
+}*/
