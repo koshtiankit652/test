@@ -19,7 +19,7 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-
+        aws-region: ${{ secrets.REGION }} 
     - name: Login to Amazon ECR
       id: login-ecr
       uses: aws-actions/amazon-ecr-login@v1
@@ -29,8 +29,8 @@ jobs:
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
         ECR_REPOSITORY: ${{ secrets.REPO_NAME }}
-        IMAGE_TAG: latest
-        DOCKER_REPO: zenith-frontend
+        IMAGE_TAG: ${{ secrets.IMAGE_TAG }}
+        DOCKER_REPO: ${{ secrets.DOCKER_REPO }}
 
       run:
        docker build -t $DOCKER_REPO .
